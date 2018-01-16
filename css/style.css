@@ -1,0 +1,384 @@
+/*
+
+Adapted from:
+
+Theme Name: Personal Website
+Description: Landing Page for Personal Site
+Author: Thomas Chen
+Author URI: thomaschen.org
+*/
+
+/* ------------------------------------------------------------------ */
+/* Elements
+/* ------------------------------------------------------------------ */
+
+html,
+body {
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+}
+
+body {
+  background: linear-gradient(270deg, #f44336, #00bcd4);
+  background-size: 400% 400%;
+  -webkit-animation: gradientshift 20s ease infinite;
+  -moz-animation: gradientshift 20s ease infinite;
+  animation: gradientshift 20s ease infinite;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+nav {
+  width: 100%;
+  background-color: #c62828;
+  padding: 20px;
+  text-align: center;
+}
+
+a {
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 16px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #bbdefb;
+  text-decoration: none;
+}
+
+hr {
+  background: RGBA(200, 200, 200, 0.25);
+  border: 0 none;
+  color: #e84033;
+  height: 2px;
+}
+
+footer {
+  font-size: 0.75em;
+  margin-bottom: 10px;
+  top: 100%;
+  display: none;
+}
+
+footer i {
+  display: inline-block;
+}
+
+footer p {
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  -moz-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------ */
+/* Classes & IDs
+/* ------------------------------------------------------------------ */
+
+.center {
+  padding: 5px;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+#profilepic {
+  border-radius: 50%;
+  width: 250px;
+  margin: 10px 10px 25% 10px;
+
+  -webkit-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -moz-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+#wrapper {
+  width: 100%;
+  overflow: auto;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#profile {
+  display: inline-block;
+  margin: 0px;
+}
+
+#content {
+  display: inline-block;
+  width: auto;
+  margin-left: 15px;
+  text-align: left;
+  overflow-x: hidden;
+
+  -webkit-animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -moz-animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+#links {
+  list-style-type: none;
+  margin: 0 0 0 -15px;
+  padding: 0;
+  overflow: hidden;
+}
+
+#links li {
+  display: inline;
+}
+
+#engagements {
+  list-style: none;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  line-height: 125%;
+}
+
+#position {
+  list-style: none;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin-left: 20px;
+  line-height: 125%;
+}
+
+#engagements a {
+  padding: 0px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Animations
+/* ------------------------------------------------------------------ */
+
+/* Background Color Gradient */
+@-webkit-keyframes gradientshift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes gradientshift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradientshift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Shift Left In*/
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Shift Right In*/
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Pulsing*/
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsiveness
+/* ------------------------------------------------------------------ */
+
+/*Screen*/
+@media screen and (min-width: 768px) {
+}
+
+/*Tablet*/
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 300%;
+  }
+
+  h2 {
+    font-size: 100%;
+  }
+}
+
+/*Mobile M*/
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 250%;
+  }
+
+  h2 {
+    font-size: 100%;
+  }
+
+  #profilepic {
+    margin: 25px 10px 25px 10px;
+  }
+}
+
+/*Mobile S*/
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 200%;
+  }
+  h2 {
+    font-size: 100%;
+  }
+
+  #position {
+    display: none;
+  }
+
+  #profilepic {
+    margin: 100px 10px 10px 10px;
+  }
+}
